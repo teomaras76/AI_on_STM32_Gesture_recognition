@@ -1,0 +1,15 @@
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armproc.dll" 
+
+"C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armstlink2.dll" 
+
+"C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\STM32L476RG-SensorTile HAR_GMP\Exe\SENSING1_ST.out" 
+
+--plugin="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\bin\armbat.dll" 
+
+--device_macro="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\debugger\ST\STM32L4xx.dmac" 
+
+--flash_loader="C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\config\flashloader\ST\FlashSTM32L4AxxG.board" 
+
+
+
+
