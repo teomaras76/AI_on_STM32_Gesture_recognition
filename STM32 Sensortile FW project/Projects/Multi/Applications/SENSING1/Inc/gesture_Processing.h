@@ -78,15 +78,15 @@ typedef enum
 /* Exported constants --------------------------------------------------------*/
 /* Exported variables --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
-#define AR_ID_STILL             (uint8_t)(0x00)
-#define AR_ID_ROUND_CCW         (uint8_t)(0x01)
-#define AR_ID_ROUND_CW          (uint8_t)(0x02)
-#define AR_ID_CROSS_RIGHT       (uint8_t)(0x03)
-#define AR_ID_CROSS_LEFT        (uint8_t)(0x04)
-#define AR_ID_RIGHT             (uint8_t)(0x05)
-#define AR_ID_LEFT              (uint8_t)(0x06)
-#define AR_ID_UP                (uint8_t)(0x07)
-#define AR_ID_DOWN              (uint8_t)(0x08)
+#define AR_ID_STILL             (uint8_t)(0x01)
+#define AR_ID_ROUND_CCW         (uint8_t)(0x02)
+#define AR_ID_ROUND_CW          (uint8_t)(0x03)
+#define AR_ID_CROSS_RIGHT       (uint8_t)(0x04)
+#define AR_ID_CROSS_LEFT        (uint8_t)(0x05)
+#define AR_ID_RIGHT             (uint8_t)(0x06)
+#define AR_ID_LEFT              (uint8_t)(0x07)
+#define AR_ID_UP                (uint8_t)(0x08)
+#define AR_ID_DOWN              (uint8_t)(0x09)
 
 
 

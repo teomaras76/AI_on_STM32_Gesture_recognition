@@ -107,12 +107,13 @@ static ai_float window_buffer[N_OVERLAPPING_WIN * AI_NETWORK_IN_1_SIZE] = {0};
 __STATIC_INLINE Gesture_output_t map2GestureClasses(uint8_t prediction)
 {
   switch(prediction){
+    case(0x00): return (Gesture_NOACTIVITY);
     case(AR_ID_STILL): return (Gesture_STATIONARY);
     case(AR_ID_ROUND_CCW)   : return (Gesture_WALKING);
-    case(AR_ID_ROUND_CW)   : return (Gesture_NOACTIVITY);
+    case(AR_ID_ROUND_CW)   : return (Gesture_FASTWALKING);
     case(AR_ID_CROSS_RIGHT)   : return (Gesture_NOACTIVITY);
     case(AR_ID_CROSS_LEFT)   : return (Gesture_NOACTIVITY);
-    case(AR_ID_RIGHT)   : return (Gesture_FASTWALKING);
+    case(AR_ID_RIGHT)   : return (Gesture_NOACTIVITY);
     case(AR_ID_LEFT)   : return (Gesture_JOGGING);
     case(AR_ID_UP)   : return (Gesture_BIKING);
     case(AR_ID_DOWN)   : return (Gesture_DRIVING);
@@ -188,6 +189,7 @@ Gesture_output_t Gesture_run(SensorAxes_t ACC_Value, SensorAxes_t GYR_Value)
   ai_i32 batch;
   Gesture_input_t iDataIN;
   //Gesture_input_t iDataInPreProc;
+  int debug_check = 0;
 
   if (AI_HANDLE_NULL == network) {
       SENSING1_PRINTF("E: network handle is NULL\r\n");
@@ -241,6 +243,7 @@ Gesture_output_t Gesture_run(SensorAxes_t ACC_Value, SensorAxes_t GYR_Value)
         aiLogErr(ai_network_get_error(network),"ai_network_run");
       }
       last_prediction = gesture_postProc(out);
+      debug_check++; 
     }
   }
   ++n_sample;
