@@ -126,8 +126,11 @@
 /* Define Inertial Acquisition interval [mSec] for Activity Recognition */
 #define NN_HAR  (defined(NN_GMP) || defined(NN_IGN) || defined (NN_IGN_WSDM))
 #if (defined(NN_GMP)) 
+  /* Matteo - Changed to 52Hz for Gesture recognition */
+  //#define HAR_ALG_ID                (1)
+  //#define INERTIAL_ACQ_ACTIVITY_MS  (38) /*26Hz*/
   #define HAR_ALG_ID                (1)
-  #define INERTIAL_ACQ_ACTIVITY_MS  (38) /*26Hz*/
+  #define INERTIAL_ACQ_ACTIVITY_MS  (19) /*52Hz*/
 #elif (defined(NN_IGN))
   #define HAR_ALG_ID                (1)
   #define INERTIAL_ACQ_ACTIVITY_MS  (38) /*26Hz*/

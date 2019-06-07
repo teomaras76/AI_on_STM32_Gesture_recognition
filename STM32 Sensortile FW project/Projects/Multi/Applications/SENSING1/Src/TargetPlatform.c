@@ -331,6 +331,9 @@ static void Init_MEM1_Sensors(void)
   Set2GAccelerometerFullScale();
   /* For accelero HW features */
   InitHWFeatures();
+  
+  /* Matteo */
+  //LSM6DSM_ACC_GYRO_W_DRDY_G_on_INT1(&TargetBoardFeatures.HandleAccSensor, LSM6DSM_ACC_GYRO_INT1_DRDY_G_ENABLED);
 
   /* Gyro */
   if(BSP_GYRO_Init( GYRO_SENSORS_AUTO, &TargetBoardFeatures.HandleGyroSensor )==COMPONENT_OK){

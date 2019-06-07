@@ -109,14 +109,14 @@ __STATIC_INLINE Gesture_output_t map2GestureClasses(uint8_t prediction)
   switch(prediction){
     case(0x00): return (Gesture_NOACTIVITY);
     case(AR_ID_STILL): return (Gesture_STATIONARY);
-    case(AR_ID_ROUND_CCW)   : return (Gesture_WALKING);
-    case(AR_ID_ROUND_CW)   : return (Gesture_FASTWALKING);
+    case(AR_ID_ROUND_CCW)   : return (Gesture_NOACTIVITY);
+    case(AR_ID_ROUND_CW)   : return (Gesture_NOACTIVITY);
     case(AR_ID_CROSS_RIGHT)   : return (Gesture_NOACTIVITY);
     case(AR_ID_CROSS_LEFT)   : return (Gesture_NOACTIVITY);
-    case(AR_ID_RIGHT)   : return (Gesture_NOACTIVITY);
+    case(AR_ID_RIGHT)   : return (Gesture_WALKING);
     case(AR_ID_LEFT)   : return (Gesture_JOGGING);
-    case(AR_ID_UP)   : return (Gesture_BIKING);
-    case(AR_ID_DOWN)   : return (Gesture_DRIVING);
+    case(AR_ID_UP)   : return (Gesture_DRIVING);
+    case(AR_ID_DOWN)   : return (Gesture_BIKING);
 
 //#if defined(NN_IGN_WSDM)
 //    case(AR_ID_CROSS_RIGHT)    : return (Gesture_STAIRS);
@@ -238,12 +238,16 @@ Gesture_output_t Gesture_run(SensorAxes_t ACC_Value, SensorAxes_t GYR_Value)
     if (index == (AI_NETWORK_IN_1_HEIGHT - 1)) {
       ai_input[0].data  = AI_HANDLE_PTR(&window_buffer[win_offset]);
       ai_output[0].data = AI_HANDLE_PTR(out);
+      /* Matteo */
+      LedToggleTargetPlatform();
       batch = ai_network_run(network, &ai_input[0], &ai_output[0]);
       if (batch != 1) {
         aiLogErr(ai_network_get_error(network),"ai_network_run");
       }
       last_prediction = gesture_postProc(out);
       debug_check++; 
+      /* Matteo */
+      LedToggleTargetPlatform();
     }
   }
   ++n_sample;

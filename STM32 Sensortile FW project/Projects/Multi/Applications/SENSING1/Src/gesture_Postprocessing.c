@@ -64,7 +64,13 @@ static uint8_t argmax(const float * array, int size)
       max = array[i]; max_idx = i;
     }
   }
-  return max_idx;
+  /* Matteo - inserted a treshold to select only high probability result */
+  if (max > 0.3){
+    return (max_idx);
+  }
+  else{
+    return 0;
+  }
 }
 #if (defined(NN_IGN_WSDM))
 static  uint8_t fmlp_temporal_filter(uint8_t prediction)
@@ -126,7 +132,8 @@ uint8_t gesture_postProc(float * scores)
 {
   uint8_t predict;
   predict = argmax(exp_average(scores, FILT_ALPHA), AI_NETWORK_OUT_1_SIZE);
-  return (fmlp_temporal_filter(predict));
+  //return (fmlp_temporal_filter(predict));
+  return(predict);
 }
 
 
