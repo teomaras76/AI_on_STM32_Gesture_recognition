@@ -223,6 +223,7 @@ def one_hot(y_):
 
     
 def create_dataset(dir_path_log_orig, dir_path_log_proc, seq_length, n_axis):
+    log_labels=np.zeros(10)
 
     dataset_file_list=get_logfile_list(dir_path_log_orig)
     print("List of log files in "+str(dir_path_log_orig) + ":")
@@ -232,9 +233,10 @@ def create_dataset(dir_path_log_orig, dir_path_log_proc, seq_length, n_axis):
     for item in dataset_file_list:
         print("Processing log file:")
         print(str(dir_path_log_orig)+str(item))
-        clean_file(str(dir_path_log_orig)+"\\"+str(item), str(dir_path_log_proc)+"\\"+str(item)+"_mod.csv")
-        X_data, Y_data, plot_img = load_data_from_log(str(dir_path_log_proc)+"\\"+str(item)+"_mod.csv",seq_length)
-        plot_img.savefig(dir_path_log_proc+"\\Images\\"+item+".png")
+        clean_file(str(dir_path_log_orig)+"/"+str(item), str(dir_path_log_proc)+"/"+str(item)+"_mod.csv")
+        X_data, Y_data, plot_img = load_data_from_log(str(dir_path_log_proc)+"/"+str(item)+"_mod.csv",seq_length)
+        #plot_img.savefig(dir_path_log_proc+"/Images/"+item+".png")
+        plot_img.savefig(dir_path_log_proc+"/Images/"+"Label_"+str(Y_data[0])+"_"+item+".png")
         # Load each row of X matrix as:
         # [acc_x[1..128],acc_y[1..128], ..., gyr_z[128]]
         X=np.zeros((1,seq_length*n_axis))
@@ -243,16 +245,24 @@ def create_dataset(dir_path_log_orig, dir_path_log_proc, seq_length, n_axis):
                 X[0,(k*seq_length)+i]=X_data[i,k]
         #print("X shape = ")
         #print(X.shape)
-        write_data_to_file(str(dir_path_log_proc)+"\\"+"dataset_x.csv", X[0,:])
-        write_data_to_file(str(dir_path_log_proc)+"\\"+"dataset_y.csv", Y_data)
+        write_data_to_file(str(dir_path_log_proc)+"/"+"dataset_x.csv", X[0,:])
+        write_data_to_file(str(dir_path_log_proc)+"/"+"dataset_y.csv", Y_data)
+
+        # Count how many logs for each label
+        log_labels[int(Y_data[0])]+=1
+        
         #X_data = scale_data(X_data)
         #plt.show()
 
+    for i in range(10):
+        print("Number of logs for:"+"Label_"+str(i)+" >> "+str(log_labels[i]))
+
 
 def split_dataset(x, y, split=80, shuffle_opt=True):
-
+    
     if shuffle_opt:
-        x, y = shuffle(x, y, random_state=0)
+        #x, y = shuffle(x, y, random_state=0) # With random_state=0 it will shuffle with always same seed and results
+        x, y = shuffle(x, y)
 
     split_index = int(math.floor(len(x) * (split/100)))
 
@@ -262,6 +272,16 @@ def split_dataset(x, y, split=80, shuffle_opt=True):
     y_train = y[:split_index]
     y_test = y[split_index:]
 
+    test_labels=np.zeros(y_test.shape[0])
+    for test_item in y_test:
+        for j in range(10):
+            if test_item[j]==1:
+                #print(j)
+                test_labels[j]+=1
+
+    for i in range(10):
+        print("Number of logs for test dataset:"+"Label_"+str(i)+" >> "+str(test_labels[i]))
+			
     return x_train, x_test , y_train, y_test
 
 def reshape_input_buffer(x_input,num_axis,seq_length):
