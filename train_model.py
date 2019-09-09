@@ -1,9 +1,3 @@
-#from __future__ import print_function
-#import matplotlib.pyplot as plt
-#import numpy as np
-#import time
-#import csv
-
 #import numpy as np
 #np.random.seed(10)
 #tf.set_random_seed(10)
@@ -19,7 +13,6 @@ import argparse
 import os
 import datetime
 import random
-#import signal_processing as sp
 import csv
 import time
 
@@ -41,25 +34,25 @@ parser.add_argument('--log_path', default = "Train log", type= str,
                     help='path to processed dataset')
 parser.add_argument('--epochs', default=30, type=int, metavar='N',
                     help='number of total epochs to run (default: 30)')
-parser.add_argument('--lr', default=0.00001, type=float,
-                    help='initial learning rate')
-parser.add_argument('--batch-size', default=50, type=int,
+#parser.add_argument('--lr', default=0.00001, type=float,
+#                    help='initial learning rate')
+parser.add_argument('--batch_size', default=50, type=int,
                     metavar='N', help='mini-batch size (default: 50)')
 parser.add_argument('--n_axis', default=6, type=int,
-                   help='number of input (default: 6)')
+                   help='number of axis input (default: 6)')
 parser.add_argument('--n_cells', default=64, type=int,
                     help='number of GRU cells for layer (default: 64)')
 parser.add_argument('--n_layers', default=2, type=int,
-                    help='number of layers (default: 2)')
-parser.add_argument('--seq_length', type=int, default=128)
+                    help='number of GRU layers (default: 2)')
+parser.add_argument('--seq_length', type=int, default=128, help='input sequence lenght (default:128)')
 parser.add_argument('-n', '--n_classes', default=10, type=int,      # To fix later 9 classes instead of 10 (class=0 not used)
                     help='number of classes (default: 9)')
-parser.add_argument('--mode', default='train')
-parser.add_argument('--pretrained', default = "", type= str,
-                    help='path to pre-trained model')
-parser.add_argument('--input_type', default = "raw", type= str,
-                    help='select input type')
-parser.add_argument('--m', default='ox' ,type = str,help='model')
+#parser.add_argument('--mode', default='train')
+#parser.add_argument('--pretrained', default = "", type= str,
+#                    help='path to pre-trained model')
+#parser.add_argument('--input_type', default = "raw", type= str,
+#                    help='select input type')
+#parser.add_argument('--m', default='ox' ,type = str,help='model')
 parser.add_argument('--retrain', default=False, help='retrain the NN or load saved parameters (default : False)')
 parser.add_argument('--create', default=False, help='create the dataset from log files (default : False)')
 parser.add_argument('--shuffle_dataset', default=False, help='reshuffle dataset for train and test sets (default : False)')
@@ -148,7 +141,6 @@ print(Y.shape)
 
 # Change structure of X
 X=reshape_input_buffer(X,args.n_axis,args.seq_length)
-# X Reshape (m_samples, num_axis, seq_length, 1)
 print("X shape is = ")
 print(X.shape)
 print (X)
@@ -161,8 +153,6 @@ print(X.shape)
 # Reshuffle and split dataset in training and test
 x_train, x_test, y_train, y_test = split_dataset(X, Y, 80, args.shuffle_dataset)
 
-#x_train = x_train.reshape(-1, args.n_axis, args.seq_length, 1)
-#x_test = x_test.reshape(-1, args.n_axis, args.seq_length, 1)
 
 #Save test data in .npy format for verification with Cube.AI tool
 np.save(str(args.data_proc)+"/"+"testset_x.npy",x_test);
@@ -171,8 +161,6 @@ np.save(str(args.data_proc)+"/"+"testset_y.npy",y_test);
 
 print("input train shape:{}".format(x_train.shape))
 print("input test shape:{}".format(x_test.shape))
-#To uncomment in case of checkpoints used
-#model, checkpoint ,save_path= create_model(args)
 model = create_model(args)
 
 if args.retrain:
@@ -187,8 +175,6 @@ if args.retrain:
         csvwiter.writerow(['epoch','loss','acc','val_loss','val_acc' ,'test_loss', 'test_acc'])    
 
     for i in range(args.epochs):
-        #To uncomment in case of checkpoints used
-        #hist = model.fit(x_train, y_train, batch_size=args.batch_size, verbose=1 ,callbacks=[checkpoint], epochs=1, validation_split=0.2)
         hist = model.fit(x_train, y_train, batch_size=args.batch_size, verbose=1, epochs=1, validation_split=0.2, shuffle=False)
         score = model.evaluate(x_test,y_test,batch_size=args.batch_size,verbose=1)
         print('[{}]Test loss :{} Test acc :{}'.format(i,score[0],score[1]))
@@ -242,13 +228,6 @@ print(accuracy)
     
 # Make prediction for given input to generate Confusion matrix
 y_pred = model.predict(x_test, batch_size=args.batch_size, verbose=1)
-#print("Prediction for the test X input:")
-#print(y_pred)
-#print("Corresponding test Y one hot vector:")
-#print(y_test)
-#print("Predicted labels:")
-#for j in range(y_pred.shape[0]):
-#    print(np.argmax(y_pred[j,:]))
 
 # Print the confusion matrix for test dataset
 print("Confusion matrix for test dataset")
@@ -267,7 +246,6 @@ train_labels=np.zeros(y_train.shape[0])
 for test_item in y_train:
     for j in range(10):
         if test_item[j]==1:
-            #print(j)
             train_labels[j]+=1
 
 for i in range(10):
@@ -278,7 +256,6 @@ test_labels=np.zeros(y_test.shape[0])
 for test_item in y_test:
     for j in range(10):
         if test_item[j]==1:
-            #print(j)
             test_labels[j]+=1
 
 for i in range(10):
