@@ -1,5 +1,5 @@
 SENSING1/User/Patch/bluenrg_utils_small_patch.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Projects/Multi/Applications/SENSING1/Patch/bluenrg_utils_small_patch.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Projects/Multi/Applications/SENSING1/Patch/bluenrg_utils_small_patch.c \
  ../../../../../../../../Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/includes/hal.h \
  ../../../../../../../../Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/includes/hal_types.h \
  ../../../../../../../../Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/includes/ble_status.h \

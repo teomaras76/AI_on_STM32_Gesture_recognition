@@ -1,5 +1,5 @@
 Middlewares/STM32_BlueNRG/Utils/gp_timer.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/utils/gp_timer.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/utils/gp_timer.c \
  ../../../../../../../../Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/includes/ble_clock.h \
  ../../../../../../../../Middlewares/ST/STM32_BlueNRG/Interface/bluenrg_itf.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \

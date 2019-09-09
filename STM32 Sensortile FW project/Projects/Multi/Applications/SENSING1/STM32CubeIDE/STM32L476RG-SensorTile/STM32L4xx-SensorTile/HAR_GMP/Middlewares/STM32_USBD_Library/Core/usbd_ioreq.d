@@ -1,5 +1,5 @@
 Middlewares/STM32_USBD_Library/Core/usbd_ioreq.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_ioreq.c \
  ../../../../../../../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_ioreq.h \
  ../../../../../../../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_def.h \
  ../../../../Inc/usbd_conf.h \

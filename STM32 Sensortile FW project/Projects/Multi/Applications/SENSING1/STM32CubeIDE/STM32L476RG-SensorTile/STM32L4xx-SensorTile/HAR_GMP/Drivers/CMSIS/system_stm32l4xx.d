@@ -1,5 +1,5 @@
 Drivers/CMSIS/system_stm32l4xx.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Projects/Multi/Applications/SENSING1/Src/system_stm32l4xx.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Projects/Multi/Applications/SENSING1/Src/system_stm32l4xx.c \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l4xx.h \
  ../../../../../../../../Drivers/CMSIS/Device/ST/STM32L4xx/Include/stm32l476xx.h \
  ../../../../../../../../Drivers/CMSIS/Include/core_cm4.h \

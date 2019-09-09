@@ -1,5 +1,5 @@
 Drivers/STM32L4xx_HAL_Driver/stm32l4xx_hal_dma.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/STM32L4xx_HAL_Driver/Src/stm32l4xx_hal_dma.c \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../../../../Inc/stm32l4xx_hal_conf.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \

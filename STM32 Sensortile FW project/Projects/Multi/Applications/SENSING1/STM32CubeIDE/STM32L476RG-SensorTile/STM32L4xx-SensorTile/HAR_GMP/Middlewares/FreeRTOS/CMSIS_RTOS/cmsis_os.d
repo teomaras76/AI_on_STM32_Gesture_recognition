@@ -1,6 +1,6 @@
 Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../../Inc/FreeRTOSConfig.h \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \
@@ -19,7 +19,7 @@ Middlewares/FreeRTOS/CMSIS_RTOS/cmsis_os.o: \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/timers.h \
  ../../../../../../../../Drivers/CMSIS/Include/cmsis_gcc.h
 
-C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:
+C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h:
 
 ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 

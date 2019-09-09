@@ -1,7 +1,7 @@
 Drivers/BSP/SensorTile/SensorTile_gg.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile_gg.c \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile_gg.h \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile.h \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile_gg.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile_gg.h \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../../../../Inc/stm32l4xx_hal_conf.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -48,13 +48,13 @@ Drivers/BSP/SensorTile/SensorTile_gg.o: \
  ../../../../../../../../Drivers/BSP/Components/Common/sensor.h \
  ../../../../../../../../Drivers/BSP/Components/Common/component.h \
  ../../../../../../../../Drivers/BSP/Components/Common/gyroscope.h \
- c:\matteo\stm32\ sensortile\ fw\ project\ -\ stm32cubeide\drivers\bsp\components\stc3115\stc3115_driver.h \
+ c:\matteo\gesture\ demo\stm32\ sensortile\ fw\ project\drivers\bsp\components\stc3115\stc3115_driver.h \
  ../../../../../../../../Drivers/BSP/Components/Common/GasGauge.h \
  ../../../../../../../../Drivers/BSP/Components/stc3115/STC3115_Driver.h
 
-C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile_gg.h:
+C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile_gg.h:
 
-C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile.h:
+C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile.h:
 
 ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 
@@ -148,7 +148,7 @@ C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile
 
 ../../../../../../../../Drivers/BSP/Components/Common/gyroscope.h:
 
-c:\matteo\stm32\ sensortile\ fw\ project\ -\ stm32cubeide\drivers\bsp\components\stc3115\stc3115_driver.h:
+c:\matteo\gesture\ demo\stm32\ sensortile\ fw\ project\drivers\bsp\components\stc3115\stc3115_driver.h:
 
 ../../../../../../../../Drivers/BSP/Components/Common/GasGauge.h:
 

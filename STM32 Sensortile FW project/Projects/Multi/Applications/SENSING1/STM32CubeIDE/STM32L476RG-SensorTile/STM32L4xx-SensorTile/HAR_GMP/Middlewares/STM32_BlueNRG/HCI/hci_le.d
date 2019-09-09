@@ -1,5 +1,5 @@
 Middlewares/STM32_BlueNRG/HCI/hci_le.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/hci/hci_le.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/hci/hci_le.c \
  ../../../../../../../../Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/includes/hal_types.h \
  ../../../../../../../../Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/includes/osal.h \
  ../../../../../../../../Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/includes/ble_status.h \

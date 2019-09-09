@@ -1,5 +1,5 @@
 Middlewares/STM32_USBD_Library/Core/usbd_core.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/ST/STM32_USB_Device_Library/Core/Src/usbd_core.c \
  ../../../../../../../../Middlewares/ST/STM32_USB_Device_Library/Core/Inc/usbd_core.h \
  ../../../../Inc/usbd_conf.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \

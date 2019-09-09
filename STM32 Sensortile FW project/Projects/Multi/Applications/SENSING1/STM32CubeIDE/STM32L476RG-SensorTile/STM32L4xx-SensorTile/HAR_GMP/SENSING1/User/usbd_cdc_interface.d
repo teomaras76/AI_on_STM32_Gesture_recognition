@@ -1,5 +1,5 @@
 SENSING1/User/usbd_cdc_interface.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Projects/Multi/Applications/SENSING1/Src/usbd_cdc_interface.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Projects/Multi/Applications/SENSING1/Src/usbd_cdc_interface.c \
  ../../../../Inc/TargetFeatures.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../../../../Inc/stm32l4xx_hal_conf.h \

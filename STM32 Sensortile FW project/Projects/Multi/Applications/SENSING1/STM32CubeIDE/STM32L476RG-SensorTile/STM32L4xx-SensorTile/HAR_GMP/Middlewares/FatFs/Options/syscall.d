@@ -1,7 +1,7 @@
 Middlewares/FatFs/Options/syscall.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Party/FatFs/src/option/syscall.c \
- c:\matteo\stm32\ sensortile\ fw\ project\ -\ stm32cubeide\middlewares\third_party\fatfs\src\ff.h \
- c:\matteo\stm32\ sensortile\ fw\ project\ -\ stm32cubeide\middlewares\third_party\fatfs\src\integer.h \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/Third_Party/FatFs/src/option/syscall.c \
+ c:\matteo\gesture\ demo\stm32\ sensortile\ fw\ project\middlewares\third_party\fatfs\src\ff.h \
+ c:\matteo\gesture\ demo\stm32\ sensortile\ fw\ project\middlewares\third_party\fatfs\src\integer.h \
  ../../../../Inc/ffconf.h ../../../../Inc/TargetFeatures.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../../../../Inc/stm32l4xx_hal_conf.h \
@@ -89,9 +89,9 @@ Middlewares/FatFs/Options/syscall.o: \
  ../../../../../../../../Drivers/CMSIS/Include/arm_math.h \
  ../../../../../../../../Drivers/CMSIS/Include/core_cm4.h
 
-c:\matteo\stm32\ sensortile\ fw\ project\ -\ stm32cubeide\middlewares\third_party\fatfs\src\ff.h:
+c:\matteo\gesture\ demo\stm32\ sensortile\ fw\ project\middlewares\third_party\fatfs\src\ff.h:
 
-c:\matteo\stm32\ sensortile\ fw\ project\ -\ stm32cubeide\middlewares\third_party\fatfs\src\integer.h:
+c:\matteo\gesture\ demo\stm32\ sensortile\ fw\ project\middlewares\third_party\fatfs\src\integer.h:
 
 ../../../../Inc/ffconf.h:
 

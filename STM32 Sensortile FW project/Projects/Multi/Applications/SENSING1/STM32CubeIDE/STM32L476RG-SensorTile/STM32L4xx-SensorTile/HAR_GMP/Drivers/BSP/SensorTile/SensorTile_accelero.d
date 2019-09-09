@@ -1,6 +1,6 @@
 Drivers/BSP/SensorTile/SensorTile_accelero.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile_accelero.c \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile_accelero.h \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile_accelero.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile_accelero.h \
  ../../../../../../../../Drivers/BSP/Components/lsm6dsm/LSM6DSM_ACC_GYRO_driver_HL.h \
  ../../../../../../../../Drivers/BSP/Components/Common/accelerometer.h \
  ../../../../../../../../Drivers/BSP/Components/Common/sensor.h \
@@ -10,7 +10,7 @@ Drivers/BSP/SensorTile/SensorTile_accelero.o: \
  ../../../../../../../../Drivers/BSP/Components/lsm303agr/LSM303AGR_ACC_driver_HL.h \
  ../../../../../../../../Drivers/BSP/Components/lsm303agr/LSM303AGR_ACC_driver.h \
  ../../../../../../../../Drivers/BSP/Components/lsm303agr/LSM303AGR_Combo_driver_HL.h \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile.h \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../../../../Inc/stm32l4xx_hal_conf.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -54,7 +54,7 @@ Drivers/BSP/SensorTile/SensorTile_accelero.o: \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h
 
-C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile_accelero.h:
+C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile_accelero.h:
 
 ../../../../../../../../Drivers/BSP/Components/lsm6dsm/LSM6DSM_ACC_GYRO_driver_HL.h:
 
@@ -74,7 +74,7 @@ C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile
 
 ../../../../../../../../Drivers/BSP/Components/lsm303agr/LSM303AGR_Combo_driver_HL.h:
 
-C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile.h:
+C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile.h:
 
 ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h:
 

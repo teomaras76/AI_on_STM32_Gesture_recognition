@@ -1,5 +1,5 @@
 Middlewares/FreeRTOS/tasks.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Party/FreeRTOS/Source/tasks.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/Third_Party/FreeRTOS/Source/tasks.c \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h \
  ../../../../Inc/FreeRTOSConfig.h \
  ../../../../../../../../Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h \

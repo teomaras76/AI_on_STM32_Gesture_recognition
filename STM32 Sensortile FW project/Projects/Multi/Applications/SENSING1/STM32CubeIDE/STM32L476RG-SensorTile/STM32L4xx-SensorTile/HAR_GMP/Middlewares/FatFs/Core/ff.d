@@ -1,7 +1,7 @@
 Middlewares/FatFs/Core/ff.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Party/FatFs/src/ff.c \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Party/FatFs/src/ff.h \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Party/FatFs/src/integer.h \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/Third_Party/FatFs/src/ff.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/Third_Party/FatFs/src/ff.h \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/Third_Party/FatFs/src/integer.h \
  ../../../../Inc/ffconf.h ../../../../Inc/TargetFeatures.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../../../../Inc/stm32l4xx_hal_conf.h \
@@ -88,11 +88,11 @@ Middlewares/FatFs/Core/ff.o: \
  ../../../../Inc/asc.h ../../../../Inc/asc_preprocessing.h \
  ../../../../../../../../Drivers/CMSIS/Include/arm_math.h \
  ../../../../../../../../Drivers/CMSIS/Include/core_cm4.h \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Party/FatFs/src/diskio.h
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/Third_Party/FatFs/src/diskio.h
 
-C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Party/FatFs/src/ff.h:
+C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/Third_Party/FatFs/src/ff.h:
 
-C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Party/FatFs/src/integer.h:
+C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/Third_Party/FatFs/src/integer.h:
 
 ../../../../Inc/ffconf.h:
 
@@ -270,4 +270,4 @@ C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Part
 
 ../../../../../../../../Drivers/CMSIS/Include/core_cm4.h:
 
-C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/Third_Party/FatFs/src/diskio.h:
+C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/Third_Party/FatFs/src/diskio.h:

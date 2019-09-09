@@ -1,6 +1,6 @@
 SENSING1/User/Patch/SensorTile_humidity_patch.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Projects/Multi/Applications/SENSING1/Patch/SensorTile_humidity_patch.c \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Projects/Multi/Applications/SENSING1/Patch/SensorTile_humidity_patch.h \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Projects/Multi/Applications/SENSING1/Patch/SensorTile_humidity_patch.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Projects/Multi/Applications/SENSING1/Patch/SensorTile_humidity_patch.h \
  ../../../../../../../../Drivers/BSP/Components/hts221/HTS221_Driver_HL.h \
  ../../../../../../../../Drivers/BSP/Components/Common/humidity.h \
  ../../../../../../../../Drivers/BSP/Components/Common/sensor.h \
@@ -53,7 +53,7 @@ SENSING1/User/Patch/SensorTile_humidity_patch.o: \
  ../../../../../../../../Drivers/BSP/Components/Common/accelerometer.h \
  ../../../../../../../../Drivers/BSP/Components/Common/gyroscope.h
 
-C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Projects/Multi/Applications/SENSING1/Patch/SensorTile_humidity_patch.h:
+C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Projects/Multi/Applications/SENSING1/Patch/SensorTile_humidity_patch.h:
 
 ../../../../../../../../Drivers/BSP/Components/hts221/HTS221_Driver_HL.h:
 

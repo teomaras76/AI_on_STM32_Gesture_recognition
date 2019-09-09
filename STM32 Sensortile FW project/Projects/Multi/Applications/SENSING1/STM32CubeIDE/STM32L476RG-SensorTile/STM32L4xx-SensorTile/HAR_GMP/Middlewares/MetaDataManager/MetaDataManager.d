@@ -1,6 +1,6 @@
 Middlewares/MetaDataManager/MetaDataManager.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/ST/STM32_MetaDataManager/MetaDataManager.c \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/ST/STM32_MetaDataManager/MetaDataManager.h \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/ST/STM32_MetaDataManager/MetaDataManager.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/ST/STM32_MetaDataManager/MetaDataManager.h \
  ../../../../Inc/MetaDataManager_Config.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../../../../Inc/stm32l4xx_hal_conf.h \
@@ -51,7 +51,7 @@ Middlewares/MetaDataManager/MetaDataManager.o: \
  ../../../../../../../../Drivers/BSP/Components/Common/gyroscope.h \
  ../../../../Inc/SENSING1_config.h
 
-C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/ST/STM32_MetaDataManager/MetaDataManager.h:
+C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/ST/STM32_MetaDataManager/MetaDataManager.h:
 
 ../../../../Inc/MetaDataManager_Config.h:
 

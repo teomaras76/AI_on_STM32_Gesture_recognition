@@ -1,5 +1,5 @@
 Drivers/BSP/SensorTile/SensorTile_audio_in.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile_audio_in.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile_audio_in.c \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal.h \
  ../../../../Inc/stm32l4xx_hal_conf.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_rcc.h \
@@ -42,8 +42,8 @@ Drivers/BSP/SensorTile/SensorTile_audio_in.o: \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_ll_usb.h \
  ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile_audio_in.h \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile.h \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile_audio_in.h \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile.h \
  ../../../../../../../../Drivers/BSP/Components/Common/accelerometer.h \
  ../../../../../../../../Drivers/BSP/Components/Common/sensor.h \
  ../../../../../../../../Drivers/BSP/Components/Common/component.h \
@@ -133,9 +133,9 @@ Drivers/BSP/SensorTile/SensorTile_audio_in.o: \
 
 ../../../../../../../../Drivers/STM32L4xx_HAL_Driver/Inc/stm32l4xx_hal_pcd_ex.h:
 
-C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile_audio_in.h:
+C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile_audio_in.h:
 
-C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Drivers/BSP/SensorTile/SensorTile.h:
+C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Drivers/BSP/SensorTile/SensorTile.h:
 
 ../../../../../../../../Drivers/BSP/Components/Common/accelerometer.h:
 

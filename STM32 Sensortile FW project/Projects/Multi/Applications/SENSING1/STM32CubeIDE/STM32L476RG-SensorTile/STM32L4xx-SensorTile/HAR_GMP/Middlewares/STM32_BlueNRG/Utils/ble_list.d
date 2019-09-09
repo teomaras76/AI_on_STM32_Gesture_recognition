@@ -1,5 +1,5 @@
 Middlewares/STM32_BlueNRG/Utils/ble_list.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/utils/ble_list.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/utils/ble_list.c \
  ../../../../../../../../Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/includes/hal_types.h \
  ../../../../../../../../Middlewares/ST/STM32_BlueNRG/SimpleBlueNRG_HCI/includes/ble_list.h \
  ../../../../../../../../Middlewares/ST/STM32_BlueNRG/Interface/bluenrg_itf.h \

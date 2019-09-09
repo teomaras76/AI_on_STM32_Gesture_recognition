@@ -1,5 +1,5 @@
 SENSING1/User/sd_diskio_SensorTile.o: \
- C:/Matteo/STM32\ Sensortile\ FW\ project\ -\ STM32CubeIDE/Projects/Multi/Applications/SENSING1/Src/sd_diskio_SensorTile.c \
+ C:/Matteo/Gesture\ demo/STM32\ Sensortile\ FW\ project/Projects/Multi/Applications/SENSING1/Src/sd_diskio_SensorTile.c \
  ../../../../../../../../Middlewares/Third_Party/FatFs/src/ff_gen_drv.h \
  ../../../../../../../../Middlewares/Third_Party/FatFs/src/diskio.h \
  ../../../../../../../../Middlewares/Third_Party/FatFs/src/integer.h \
