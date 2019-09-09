@@ -1,0 +1,14 @@
+SensorTile_BlueNRG_patch.c:119:6:HAL_SPI_MspInit	80	static
+SensorTile_BlueNRG_patch.c:237:6:BNRG_SPI_Init	8	static
+SensorTile_BlueNRG_patch.c:260:6:BlueNRG_RST	8	static
+SensorTile_BlueNRG_patch.c:274:9:BlueNRG_DataPresent	8	static
+SensorTile_BlueNRG_patch.c:303:9:BlueNRG_SPI_Read_All	56	static,ignoring_inline_asm
+SensorTile_BlueNRG_patch.c:367:9:BlueNRG_SPI_Write	312	static,ignoring_inline_asm
+SensorTile_BlueNRG_patch.c:205:6:Hal_Write_Serial	40	static
+SensorTile_BlueNRG_patch.c:451:6:set_irq_as_output	40	static
+SensorTile_BlueNRG_patch.c:469:6:set_irq_as_input	40	static
+SensorTile_BlueNRG_patch.c:287:6:BlueNRG_HW_Bootloader	8	static
+SensorTile_BlueNRG_patch.c:513:6:Enable_SPI_IRQ	0	static
+SensorTile_BlueNRG_patch.c:523:6:Disable_SPI_IRQ	0	static
+SensorTile_BlueNRG_patch.c:533:6:Clear_SPI_IRQ	0	static
+SensorTile_BlueNRG_patch.c:543:6:Clear_SPI_EXTI_Flag	0	static

@@ -1,0 +1,5 @@
+gp_timer.c:51:1:Timer_Set	8	static
+gp_timer.c:71:1:Timer_Reset	0	static
+gp_timer.c:91:1:Timer_Restart	8	static
+gp_timer.c:108:1:Timer_Expired	8	static
+gp_timer.c:128:1:Timer_Remaining	8	static

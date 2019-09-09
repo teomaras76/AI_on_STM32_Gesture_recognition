@@ -1,0 +1,4 @@
+gesture_Processing.c:203:18:Gesture_run	40	static
+gesture_Processing.c:360:8:Gesture_Initialize	56	static
+gesture_Processing.c:439:6:Gesture_DeInitialize	8	static
+gesture_Processing.c:464:18:Gesture_get_Activity_Code	0	static

@@ -1,0 +1,14 @@
+DataLog_Manager.c:936:13:DATALOG_SD_LogAudio_Disable	32	static
+DataLog_Manager.c:204:13:SD_CardLoggingMemsData	304	static
+DataLog_Manager.c:917:13:DATALOG_SD_LogMems_Disable	16	static
+DataLog_Manager.c:712:16:DATALOG_SD_LogMems_Enable	592	static
+DataLog_Manager.c:136:6:AudioProcess_SD_Recording	8	static
+DataLog_Manager.c:567:6:SD_CardLoggingMemsStop	24	static
+DataLog_Manager.c:622:6:SD_CardLoggingAudioStop	24	static
+DataLog_Manager.c:689:6:DATALOG_SD_Init	8	static
+DataLog_Manager.c:429:6:SD_CardLoggingMemsStart	24	static
+DataLog_Manager.c:653:6:SdCardMemsRecordingRun	8	static
+DataLog_Manager.c:532:6:SD_CardLoggingAudioStart	72	static
+DataLog_Manager.c:671:6:SdCardAudioRecordingRun	16	static
+DataLog_Manager.c:907:6:DATALOG_SD_DeInit	0	static
+DataLog_Manager.c:968:6:SaveDataAnnotation	104	static

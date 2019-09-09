@@ -1,0 +1,8 @@
+MetaDataManager.c:115:6:InitMetaDataManager	64	static
+MetaDataManager.c:469:6:ReseMetaDataManager	8	static
+MetaDataManager.c:495:10:EraseMetaDataManager	0	static
+MetaDataManager.c:508:6:SaveMetaDataManager	8	static
+MetaDataManager.c:562:9:MDM_LicenseParsing	32	static
+MetaDataManager.c:631:10:MetaDataLicenseStatus	0	static
+MetaDataManager.c:642:10:MDM_SaveGMD	8	static
+MetaDataManager.c:663:10:MDM_ReCallGMD	8	static

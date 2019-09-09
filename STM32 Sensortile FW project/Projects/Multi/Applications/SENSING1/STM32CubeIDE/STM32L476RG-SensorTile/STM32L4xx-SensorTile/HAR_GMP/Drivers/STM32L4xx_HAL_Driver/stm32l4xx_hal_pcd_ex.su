@@ -1,0 +1,9 @@
+stm32l4xx_hal_pcd_ex.c:92:19:HAL_PCDEx_SetTxFiFo	8	static
+stm32l4xx_hal_pcd_ex.c:134:19:HAL_PCDEx_SetRxFiFo	0	static
+stm32l4xx_hal_pcd_ex.c:146:19:HAL_PCDEx_ActivateLPM	0	static
+stm32l4xx_hal_pcd_ex.c:163:19:HAL_PCDEx_DeActivateLPM	0	static
+stm32l4xx_hal_pcd_ex.c:250:19:HAL_PCDEx_ActivateBCD	0	static
+stm32l4xx_hal_pcd_ex.c:265:19:HAL_PCDEx_DeActivateBCD	0	static
+stm32l4xx_hal_pcd_ex.c:471:13:HAL_PCDEx_LPM_Callback	0	static
+stm32l4xx_hal_pcd_ex.c:488:13:HAL_PCDEx_BCD_Callback	0	static
+stm32l4xx_hal_pcd_ex.c:179:6:HAL_PCDEx_BCD_VBUSDetect	16	static

@@ -1,0 +1,10 @@
+PowerControl.c:63:14:GetMinPowerMode	0	static
+PowerControl.c:68:5:SetMinPowerMode	0	static
+PowerControl.c:74:5:PowerCtrlLock	0	static
+PowerControl.c:78:5:PowerCtrlUnLock	0	static
+PowerControl.c:83:5:PowerCtrlGetState	0	static
+PowerControl.c:88:6:vApplicationIdleHook	0	static,ignoring_inline_asm
+PowerControl.c:93:5:initPowerController	24	static
+PowerControl.c:128:10:timeInSeconds	0	static
+PowerControl.c:141:6:wakeIn	8	static
+PowerControl.c:159:6:vPortSuppressTicksAndSleep	40	static,ignoring_inline_asm

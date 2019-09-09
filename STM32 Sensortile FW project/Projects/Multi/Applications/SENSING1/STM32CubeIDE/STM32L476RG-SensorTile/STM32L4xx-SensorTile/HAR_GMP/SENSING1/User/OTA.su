@@ -1,0 +1,3 @@
+OTA.c:129:8:CheckBootLoaderCompliance	0	static
+OTA.c:318:8:UpdateFWBlueMS	88	static
+OTA.c:437:6:StartUpdateFWBlueMS	32	static

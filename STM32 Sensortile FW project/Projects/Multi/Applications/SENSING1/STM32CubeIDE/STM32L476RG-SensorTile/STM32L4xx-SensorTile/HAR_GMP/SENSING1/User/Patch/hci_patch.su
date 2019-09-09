@@ -1,0 +1,11 @@
+hci_patch.c:216:13:move_list.constprop	24	static
+hci_patch.c:78:6:hci_timeout_callback	0	static
+hci_patch.c:84:6:HCI_Init	16	static
+hci_patch.c:108:5:HCI_verify	0	static
+hci_patch.c:121:13:HCI_Event_CB	0	static
+hci_patch.c:148:6:HCI_Queue_Empty	0	static
+hci_patch.c:153:6:HCI_Isr	32	static
+hci_patch.c:126:6:HCI_Process	24	static
+hci_patch.c:189:6:hci_write	0	static
+hci_patch.c:202:6:hci_send_cmd	24	static
+hci_patch.c:244:5:hci_send_req	56	static

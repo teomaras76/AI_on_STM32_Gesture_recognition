@@ -1,0 +1,7 @@
+network.c:1161:9:ai_network_get_info	152	static
+network.c:1222:10:ai_network_get_error	0	static
+network.c:1228:10:ai_network_create	16	static
+network.c:1238:11:ai_network_destroy	0	static
+network.c:1244:9:ai_network_init	24	static
+network.c:1259:8:ai_network_run	0	static
+network.c:1266:8:ai_network_forward	0	static

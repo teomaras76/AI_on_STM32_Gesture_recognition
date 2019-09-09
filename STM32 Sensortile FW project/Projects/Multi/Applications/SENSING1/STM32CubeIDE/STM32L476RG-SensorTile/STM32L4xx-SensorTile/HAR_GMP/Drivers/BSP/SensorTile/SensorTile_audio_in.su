@@ -1,0 +1,14 @@
+SensorTile_audio_in.c:716:13:DFSDMx_FilterMspInit	24	static
+SensorTile_audio_in.c:164:9:BSP_AUDIO_IN_DeInit	32	static
+SensorTile_audio_in.c:178:16:BSP_AUDIO_IN_ClockConfig	152	static
+SensorTile_audio_in.c:146:9:BSP_AUDIO_IN_Init	96	static
+SensorTile_audio_in.c:209:9:BSP_AUDIO_IN_Record	24	static
+SensorTile_audio_in.c:231:9:BSP_AUDIO_IN_Stop	16	static
+SensorTile_audio_in.c:251:9:BSP_AUDIO_IN_Pause	0	static
+SensorTile_audio_in.c:270:9:BSP_AUDIO_IN_Resume	24	static
+SensorTile_audio_in.c:295:9:BSP_AUDIO_IN_SetVolume	0	static
+SensorTile_audio_in.c:306:13:BSP_AUDIO_IN_Error_Callback	0	static
+SensorTile_audio_in.c:915:13:BSP_AUDIO_IN_TransferComplete_CallBack	0	static
+SensorTile_audio_in.c:866:6:HAL_DFSDM_FilterRegConvCpltCallback	56	static
+SensorTile_audio_in.c:926:13:BSP_AUDIO_IN_HalfTransfer_CallBack	0	static
+SensorTile_audio_in.c:891:6:HAL_DFSDM_FilterRegConvHalfCpltCallback	56	static

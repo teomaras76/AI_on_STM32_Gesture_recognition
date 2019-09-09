@@ -1,0 +1,16 @@
+SensorTile_gg.c:102:18:BSP_GG_Init	16	static
+SensorTile_gg.c:162:18:BSP_GG_DeInit	16	static
+SensorTile_gg.c:203:18:BSP_GG_IsInitialized	0	static
+SensorTile_gg.c:231:18:BSP_GG_IsCombo	0	static
+SensorTile_gg.c:258:18:BSP_GG_Get_WhoAmI	8	static
+SensorTile_gg.c:295:18:BSP_GG_Task	0	static
+SensorTile_gg.c:323:18:BSP_GG_Reset	0	static
+SensorTile_gg.c:350:18:BSP_GG_Stop	0	static
+SensorTile_gg.c:378:18:BSP_GG_GetOCV	0	static
+SensorTile_gg.c:406:18:BSP_GG_GetSOC	0	static
+SensorTile_gg.c:434:18:BSP_GG_GetChargeValue	0	static
+SensorTile_gg.c:462:18:BSP_GG_GetPresence	0	static
+SensorTile_gg.c:490:18:BSP_GG_GetCurrent	0	static
+SensorTile_gg.c:518:18:BSP_GG_GetVoltage	0	static
+SensorTile_gg.c:546:18:BSP_GG_GetTemperature	0	static
+SensorTile_gg.c:573:18:BSP_GG_GetRemTime	0	static

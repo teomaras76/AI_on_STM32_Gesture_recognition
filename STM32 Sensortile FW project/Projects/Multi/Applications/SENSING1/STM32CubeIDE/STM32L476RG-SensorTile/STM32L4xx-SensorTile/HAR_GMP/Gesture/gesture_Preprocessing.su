@@ -1,0 +1,4 @@
+gesture_Preprocessing.c:71:6:iir_direct2_init	0	static
+gesture_Preprocessing.c:86:7:iir_direct2_filter	12	static
+gesture_Preprocessing.c:100:6:dynamic_acceleration	24	static
+gesture_Preprocessing.c:127:17:gravity_rotate	48	static

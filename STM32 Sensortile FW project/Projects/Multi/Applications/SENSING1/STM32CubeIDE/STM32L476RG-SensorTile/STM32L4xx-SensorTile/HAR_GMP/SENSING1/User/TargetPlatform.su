@@ -1,0 +1,12 @@
+TargetPlatform.c:105:6:InitTargetPlatform	8	static
+TargetPlatform.c:204:6:enableMotionSensors	8	static
+TargetPlatform.c:224:6:disableMotionSensors	8	static
+TargetPlatform.c:244:6:enableEnvSensors	8	static
+TargetPlatform.c:288:6:disableEnvSensors	8	static
+TargetPlatform.c:434:6:InitMics	8	static
+TargetPlatform.c:444:6:DeInitMics	8	static
+TargetPlatform.c:526:6:LedOnTargetPlatform	0	static
+TargetPlatform.c:540:6:LedOffTargetPlatform	0	static
+TargetPlatform.c:553:6:LedToggleTargetPlatform	0	static
+TargetPlatform.c:627:10:UserFunctionForErasingFlash	32	static
+TargetPlatform.c:663:10:UserFunctionForSavingFlash	24	static

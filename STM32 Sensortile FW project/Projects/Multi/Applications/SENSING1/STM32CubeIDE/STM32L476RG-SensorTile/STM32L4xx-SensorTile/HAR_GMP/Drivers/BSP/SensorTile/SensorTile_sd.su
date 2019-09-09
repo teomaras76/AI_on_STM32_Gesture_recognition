@@ -1,0 +1,7 @@
+SensorTile_sd.c:151:9:BSP_SD_Init	24	static
+SensorTile_sd.c:185:9:BSP_SD_GetCardInfo	32	static
+SensorTile_sd.c:210:9:BSP_SD_ReadBlocks	32	static
+SensorTile_sd.c:291:9:BSP_SD_WriteBlocks	32	static
+SensorTile_sd.c:374:6:HAL_SPI_TxCpltCallback	0	static
+SensorTile_sd.c:684:9:BSP_SD_GetCardState	0	static
+SensorTile_sd.c:762:9:BSP_SD_Erase	16	static
