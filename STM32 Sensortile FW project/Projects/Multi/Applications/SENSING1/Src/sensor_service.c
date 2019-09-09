@@ -925,24 +925,28 @@ void setConnectable(void)
    Enable_SPI_IRQ();
   /* disable scan response */
   hci_le_set_scan_resp_data(0,NULL);
-#ifndef BLE_CHANGE_ADV_INTERVAL
-  aci_gap_set_discoverable(ADV_IND, 0, 0,
-#else /* BLE_CHANGE_ADV_INTERVAL */
-  aci_gap_set_discoverable(ADV_IND, 0x0640, 0x0640,
-// 0x800 default value - 1.28 s
-// 0x640  - 1.00 s
-#endif /* BLE_CHANGE_ADV_INTERVAL */
-#ifndef MAC_BLUEMS
-  #ifdef MAC_STM32UID_BLUEMS
-                           STATIC_RANDOM_ADDR,
-  #else /* MAC_STM32UID_BLUEMS */
-                           RANDOM_ADDR,
-  #endif /* MAC_STM32UID_BLUEMS */
-#else /* MAC_BLUEMS */
-                           PUBLIC_ADDR,
-#endif /* MAC_BLUEMS */
-                           NO_WHITE_LIST_USE,
-                           sizeof(local_name), local_name, 0, NULL, 0, 0);
+  
+  /* Matteo */
+  aci_gap_set_discoverable(ADV_IND, 2048, 4096, (0), 
+                                   NO_WHITE_LIST_USE, sizeof(local_name), local_name, 0, NULL, 0, 0);
+//#ifndef BLE_CHANGE_ADV_INTERVAL
+//  aci_gap_set_discoverable(ADV_IND, 0, 0,
+//#else /* BLE_CHANGE_ADV_INTERVAL */
+//  aci_gap_set_discoverable(ADV_IND, 0x0640, 0x0640,
+//// 0x800 default value - 1.28 s
+//// 0x640  - 1.00 s
+//#endif /* BLE_CHANGE_ADV_INTERVAL */
+//#ifndef MAC_BLUEMS
+//  #ifdef MAC_STM32UID_BLUEMS
+//                           STATIC_RANDOM_ADDR,
+//  #else /* MAC_STM32UID_BLUEMS */
+//                           RANDOM_ADDR,
+//  #endif /* MAC_STM32UID_BLUEMS */
+//#else /* MAC_BLUEMS */
+//                           PUBLIC_ADDR,
+//#endif /* MAC_BLUEMS */
+//                           NO_WHITE_LIST_USE,
+//                           sizeof(local_name), local_name, 0, NULL, 0, 0);
 
   /* Send Advertising data */
   aci_gap_update_adv_data(26, manuf_data);

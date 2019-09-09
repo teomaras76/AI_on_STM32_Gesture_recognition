@@ -113,6 +113,9 @@ typedef enum
 
 # define sequence_length        128
 
+/* Matteo - To uncomment to log on SD card input and output of NN inference (for debug purpose)*/
+//#define AI_LOG_INFERENCE    
+    
 /** @defgroup NN_AR_Exported_Functions NN_AR_Exported_Functions
  * @{
  */
@@ -154,6 +157,10 @@ Gesture_output_t Gesture_get_Activity_Code(void);
  * @retval Number of characters in the version string
  */
 uint8_t Gesture_GetLibVersion(char *version);
+
+/* Matteo */
+static void SD_CardLogging_AI_inference(char* NN_input, uint32_t NN_input_size, Gesture_output_t Y_log);
+
 
 
 /**

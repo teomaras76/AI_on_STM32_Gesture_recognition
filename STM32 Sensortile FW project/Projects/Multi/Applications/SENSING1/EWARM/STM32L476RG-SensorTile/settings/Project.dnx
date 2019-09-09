@@ -20,7 +20,7 @@
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
     </StLinkDriver>
     <DebugChecksum>
-        <Checksum>3026270064</Checksum>
+        <Checksum>3844031027</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -127,8 +127,7 @@
     <Breakpoints2>
         <Bp0>_ 0 "EMUL_CODE" "{$PROJ_DIR$\..\..\Src\OTA.c}.5.1" 0 0 1 "" 0 "" 0</Bp0>
         <Bp1>_ 0 "EMUL_CODE" "{C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\Matteo\Gesture\network.c}.21.1" 0 0 1 "" 0 "" 0</Bp1>
-        <Bp2>_ 1 "EMUL_CODE" "{C:\Matteo\Gesture demo\STM32 Sensortile FW project\Drivers\BSP\SensorTile\SensorTile_gyro.c}.605.3" 0 0 1 "" 0 "" 0</Bp2>
-        <Count>3</Count>
+        <Count>2</Count>
     </Breakpoints2>
     <Aliases>
         <Count>0</Count>

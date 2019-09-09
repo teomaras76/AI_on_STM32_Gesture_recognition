@@ -1,55 +1,55 @@
-"C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\Src\HWAdvanceFeatures.c"
+"C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\Src\HWAdvanceFeatures.c"
 -std=c11
 -ferror-limit=0
 -fbracket-depth=512
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\Src
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\Src
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\Inc
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\Inc
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\Patch
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\Patch
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\STM32L4xx_HAL_Driver\Inc
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\STM32L4xx_HAL_Driver\Inc
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\includes
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\includes
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\Components\Common
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\Components\Common
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\Components\lsm6dsm
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\Components\lsm6dsm
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\Components\hts221
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\Components\hts221
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\Components\lps22hb
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\Components\lps22hb
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\Components\lsm303agr
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\Components\lsm303agr
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\SensorTile
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\SensorTile
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L4xx\Include
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\CMSIS\Device\ST\STM32L4xx\Include
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\STM32_AI_Library\Inc
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\STM32_AI_Library\Inc
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\STM32_USB_Device_Library\Core\Inc
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\Components\stc3115
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Drivers\BSP\Components\stc3115
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\STM32_MetaDataManager
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\STM32_MetaDataManager
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\STM32_BlueNRG\Interface
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\STM32_BlueNRG\Interface
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\include
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\Third_Party\FreeRTOS\Source\include
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\Third_Party\FatFs\src
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\Third_Party\FatFs\src
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\Third_Party\FatFs\src\drivers
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\Third_Party\FatFs\src\drivers
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\Matteo\Gesture
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\EWARM\STM32L476RG-SensorTile\..\..\..\..\..\..\Middlewares\ST\Matteo\Gesture
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\Core\Include
 -I
@@ -59,51 +59,51 @@ C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\inc
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\inc\c
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\Inc
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\Inc
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Projects\Multi\Applications\SENSING1\Patch
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\Patch
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Drivers\STM32L4xx_HAL_Driver\Inc
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Drivers\STM32L4xx_HAL_Driver\Inc
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\includes
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\ST\STM32_BlueNRG\SimpleBlueNRG_HCI\includes
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Drivers\BSP\Components\Common
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Drivers\BSP\Components\Common
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Drivers\BSP\Components\lsm6dsm
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Drivers\BSP\Components\lsm6dsm
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Drivers\BSP\Components\hts221
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Drivers\BSP\Components\hts221
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Drivers\BSP\Components\lps22hb
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Drivers\BSP\Components\lps22hb
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Drivers\BSP\Components\lsm303agr
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Drivers\BSP\Components\lsm303agr
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Drivers\BSP\SensorTile
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Drivers\BSP\SensorTile
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Drivers\CMSIS\Device\ST\STM32L4xx\Include
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Drivers\CMSIS\Device\ST\STM32L4xx\Include
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\ST\STM32_AI_Library\Inc
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\ST\STM32_AI_Library\Inc
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\ST\STM32_USB_Device_Library\Class\CDC\Inc
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\ST\STM32_USB_Device_Library\Core\Inc
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\ST\STM32_USB_Device_Library\Core\Inc
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Drivers\BSP\Components\stc3115
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Drivers\BSP\Components\stc3115
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\ST\STM32_MetaDataManager
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\ST\STM32_MetaDataManager
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\ST\STM32_BlueNRG\Interface
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\ST\STM32_BlueNRG\Interface
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\Third_Party\FreeRTOS\Source\portable\IAR\ARM_CM4F
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\Third_Party\FreeRTOS\Source\include
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\Third_Party\FreeRTOS\Source\include
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\Third_Party\FatFs\src
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\Third_Party\FatFs\src
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\Third_Party\FatFs\src\drivers
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\Third_Party\FatFs\src\drivers
 -I
-C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\ST\Matteo\Gesture
+C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\ST\Matteo\Gesture
 -I
 C:\Program Files (x86)\IAR Systems\Embedded Workbench 8.1\arm\CMSIS\Core\Include
 -I

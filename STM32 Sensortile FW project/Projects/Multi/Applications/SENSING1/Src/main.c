@@ -137,7 +137,7 @@
 #include "PowerControl.h"
 
 #ifdef SENSING1_ENABLE_SD_CARD_LOGGING
-#include "DataLog_Manager.h"
+  #include "DataLog_Manager.h"
 #endif /* SENSING1_ENABLE_SD_CARD_LOGGING */
 
 #include "gesture_Processing.h"
@@ -145,6 +145,12 @@
 //#include "OTA.h"
 
 #include "asc.h"
+
+
+/* Matteo */
+#include "ff_gen_drv.h"
+#include "DataLog_Manager.h"
+
 
 /* Private typedef -----------------------------------------------------------*/
 
@@ -191,6 +197,14 @@ MDM_knownGMD_t known_MetaData[]={
 };
 
 uint16_t PedometerStepCount= 0;
+
+/* Matteo */
+FIL MyFileAI;
+FATFS myFATAFS;
+char mySDPath[4];
+char AI_file_name[64] = "AI_inference_log";
+char myPath[] = "Test_AI_log.csv\0";
+char *MonthName[]={"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
 
 /* Private variables ---------------------------------------------------------*/
 static volatile int           ButtonPressed    = 0 ;
@@ -260,6 +274,7 @@ static void ComputeGesture(void);
 static void RunASC(void);
 #endif /* (NN_HAR) */
 
+
 extern int hci_flush_ReadQ(void);
 
 extern tBleStatus Config_NotifyBLE(uint32_t Feature,uint8_t Command,uint8_t data);
@@ -307,6 +322,30 @@ osTimerDef (TimerCdcHandle , CdcCb);
 int main(void)
 {
   HardwareInit();
+  /* Matteo */
+  #ifdef AI_LOG_INFERENCE
+    SD_IO_CS_Init();
+    DATALOG_SD_Init();
+    RTC_GetCurrentDateTime();
+    sprintf(AI_file_name, "%s-Ann_%02d_%s_%02d_%02dh_%02dm_%02ds.csv",
+                       AI_file_name,
+                       CurrentDate.Date,
+                       MonthName[CurrentDate.Month-1],
+                       CurrentDate.Year,
+                       CurrentTime.Hours,
+                       CurrentTime.Minutes,
+                       CurrentTime.Seconds);
+  
+    //f_open(&MyFileAI, AI_file_name, FA_CREATE_ALWAYS | FA_WRITE);
+    //char test_buff[32]="AI inference log\n";
+    //uint32_t byteswr_test;
+    f_open(&MyFileAI, AI_file_name, FA_CREATE_ALWAYS | FA_WRITE);
+    //f_write(&MyFileAI, test_buff, sizeof(test_buff), &byteswr_test);
+    //f_sync(&MyFileAI);
+    HAL_Delay(100);
+  
+    //f_close(&MyFileAI);
+  #endif
 
 #if ( configUSE_TRACE_FACILITY == 1 )
   vTraceEnable(TRC_START);
@@ -1011,6 +1050,7 @@ static void ComputeGesture(void)
   //ActivityCode =  Gesture_run(ACC_Value_Raw, GYR_Value_Raw);
   ActivityCode =  Gesture_run(Acceleration, AngularVelocity);
 
+  /* Matteo */
   if(ActivityCodeStored!=ActivityCode){
     ActivityCodeStored = ActivityCode;
     msg.type           = ACTIVITY;
@@ -1020,10 +1060,45 @@ static void ComputeGesture(void)
     if(W2ST_CHECK_CONNECTION(W2ST_CONNECT_STD_TERM)) {
        BytesToWrite = sprintf((char *)BufferToWrite,"Sending: AR=%d\n",ActivityCode);
        Term_Update(BufferToWrite,BytesToWrite);
+       
+//       LedToggleTargetPlatform();
+//       HAL_Delay(100);
+//       LedToggleTargetPlatform();
+//       HAL_Delay(100);
+//       LedToggleTargetPlatform();
+//       HAL_Delay(100);
+//       LedToggleTargetPlatform();
+  
     } else {
       SENSING1_PRINTF("Sending: AR=%d\r\n",ActivityCode);
+      LedToggleTargetPlatform();
+      HAL_Delay(100);
+      LedToggleTargetPlatform();
+      HAL_Delay(100);
+      LedToggleTargetPlatform();
+      HAL_Delay(100);
+      LedToggleTargetPlatform();
+      HAL_Delay(100);
+      LedToggleTargetPlatform();
+      HAL_Delay(100);
+      LedToggleTargetPlatform();
+      HAL_Delay(100);
+      LedToggleTargetPlatform();
+      HAL_Delay(100);
+      LedToggleTargetPlatform();
     }
   }
+//  msg.type           = ACTIVITY;
+//  msg.activity       = ActivityCode ;
+//  SendMsgToHost(&msg);  
+//  
+//  if(W2ST_CHECK_CONNECTION(W2ST_CONNECT_STD_TERM)) {
+//     BytesToWrite = sprintf((char *)BufferToWrite,"Sending: AR=%d\n",ActivityCode);
+//     Term_Update(BufferToWrite,BytesToWrite);
+//  } else {
+//    SENSING1_PRINTF("Sending: AR=%d\r\n",ActivityCode);
+//  }
+//  
 }
 #endif /* NN_HAR */
 
@@ -1885,4 +1960,8 @@ void vApplicationStackOverflowHook (void)
 
   }
 }
+
+
+
+
 /******************* (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

@@ -48,6 +48,11 @@
 #include "network.h"
 #include "network_data.h"
 
+/* Matteo */
+#include "main.h"
+#include "ff_gen_drv.h"
+#include "DataLog_Manager.h"
+
 /* Imported Variable -------------------------------------------------------------*/
 
 /* exported Variable -------------------------------------------------------------*/
@@ -94,6 +99,15 @@ static ai_size n_sample = 0;
 //#pragma location=0x10000000
 static ai_float window_buffer[N_OVERLAPPING_WIN * AI_NETWORK_IN_1_SIZE] = {0}; 
 
+
+extern char mySDPath[4];
+extern char AI_file_name[64];
+extern FIL MyFileAI;
+extern char myPath[];
+extern char *MonthName[];
+
+
+
 // List of all Gestures to be added later
 //#define AR_ID_STILL             (uint8_t)(0x01)
 //#define AR_ID_ROUND_CCW         (uint8_t)(0x02)
@@ -109,14 +123,14 @@ __STATIC_INLINE Gesture_output_t map2GestureClasses(uint8_t prediction)
   switch(prediction){
     case(0x00): return (Gesture_NOACTIVITY);
     case(AR_ID_STILL): return (Gesture_STATIONARY);
-    case(AR_ID_ROUND_CCW)   : return (Gesture_NOACTIVITY);
-    case(AR_ID_ROUND_CW)   : return (Gesture_NOACTIVITY);
-    case(AR_ID_CROSS_RIGHT)   : return (Gesture_NOACTIVITY);
-    case(AR_ID_CROSS_LEFT)   : return (Gesture_NOACTIVITY);
-    case(AR_ID_RIGHT)   : return (Gesture_WALKING);
-    case(AR_ID_LEFT)   : return (Gesture_JOGGING);
-    case(AR_ID_UP)   : return (Gesture_DRIVING);
-    case(AR_ID_DOWN)   : return (Gesture_BIKING);
+    case(AR_ID_ROUND_CCW)   : return (Gesture_WALKING);
+    case(AR_ID_ROUND_CW)   : return (Gesture_JOGGING);
+    case(AR_ID_CROSS_RIGHT)   : return (Gesture_DRIVING);
+    case(AR_ID_CROSS_LEFT)   : return (Gesture_BIKING);
+    case(AR_ID_RIGHT)   : return (Gesture_NOACTIVITY);
+    case(AR_ID_LEFT)   : return (Gesture_NOACTIVITY);
+    case(AR_ID_UP)   : return (Gesture_NOACTIVITY);
+    case(AR_ID_DOWN)   : return (Gesture_NOACTIVITY);
 
 //#if defined(NN_IGN_WSDM)
 //    case(AR_ID_CROSS_RIGHT)    : return (Gesture_STAIRS);
@@ -181,6 +195,10 @@ __STATIC_INLINE int aiCheckNetwork(const ai_network_report* report)
 * @param  SensorAxesRaw_t ACC_Value_Raw Acceleration value (x/y/z)
 * @retval None
 */
+
+/* Matteo - Buffer for NN input for datalog purpose */
+char NN_input_buffer[6000];             // 128 samples, 6 axis, 6 characters for one value >> buffer of 4608
+
 #ifdef NN_GMP
 Gesture_output_t Gesture_run(SensorAxes_t ACC_Value, SensorAxes_t GYR_Value)
 {
@@ -196,6 +214,14 @@ Gesture_output_t Gesture_run(SensorAxes_t ACC_Value, SensorAxes_t GYR_Value)
       return Gesture_NOACTIVITY;
   }
   
+///* Matteo */
+//#ifdef AI_LOG_INFERENCE
+//  //char NN_input_buffer[]="";
+//  uint32_t Pos=0;
+//  //int i=0;
+//  int j=0;
+//#endif
+  
 /* Matteo - Changed scale for acc from G to mG, Gyro in mdps */
 //  iDataIN.AccX = (float)ACC_Value_Raw.AXIS_X * TargetBoardFeatures.AccSensiMultInG;
 //  iDataIN.AccY = (float)ACC_Value_Raw.AXIS_Y * TargetBoardFeatures.AccSensiMultInG;
@@ -207,7 +233,7 @@ Gesture_output_t Gesture_run(SensorAxes_t ACC_Value, SensorAxes_t GYR_Value)
   iDataIN.GyrY = (float)GYR_Value.AXIS_Y;
   iDataIN.GyrZ = (float)GYR_Value.AXIS_Z;
   
-  // No need to rotate gravity for gesture
+  // Matteo - No need to rotate gravity for gesture
   //iDataInPreProc = gravity_rotate(&iDataIN);
   
   /* add samples to each active window */
@@ -239,7 +265,7 @@ Gesture_output_t Gesture_run(SensorAxes_t ACC_Value, SensorAxes_t GYR_Value)
       ai_input[0].data  = AI_HANDLE_PTR(&window_buffer[win_offset]);
       ai_output[0].data = AI_HANDLE_PTR(out);
       /* Matteo */
-      LedToggleTargetPlatform();
+      //LedToggleTargetPlatform();
       batch = ai_network_run(network, &ai_input[0], &ai_output[0]);
       if (batch != 1) {
         aiLogErr(ai_network_get_error(network),"ai_network_run");
@@ -247,13 +273,30 @@ Gesture_output_t Gesture_run(SensorAxes_t ACC_Value, SensorAxes_t GYR_Value)
       last_prediction = gesture_postProc(out);
       debug_check++; 
       /* Matteo */
-      LedToggleTargetPlatform();
+      //LedToggleTargetPlatform();
+      ActivityCode = map2GestureClasses(last_prediction);
+      #ifdef AI_LOG_INFERENCE
+      /* Matteo */
+      uint32_t Pos=0;
+      int k=0;
+      int j=0;
+        for (k = 0; k < 128; ++k){
+          for (j = 0; j < 6; ++j){
+            //Pos += sprintf(Pos+NN_input_buffer, "%02d,", ((uint32_t*) (ai_input[0].data))[6*k+j]);
+            Pos += sprintf(Pos+NN_input_buffer, "%5.0f,", ((float*) (ai_input[0].data))[6*k+j]);
+          }
+          //Pos += sprintf(Pos+NN_input_buffer+Pos,"%c",'\n');
+        }
+        //SD_CardLogging_AI_inference(NN_input_buffer, Pos, last_prediction);
+      #endif
+      //LedToggleTargetPlatform();
     }
   }
   ++n_sample;
   
-  ActivityCode = map2GestureClasses(last_prediction);
+  //ActivityCode = map2GestureClasses(last_prediction);
   
+    
   return ActivityCode;
 }
 //#elif (defined (NN_IGN) || defined(NN_IGN_WSDM))
@@ -422,5 +465,63 @@ Gesture_output_t Gesture_get_Activity_Code(void)
 {
   return ActivityCode;
 }
+
+#ifdef AI_LOG_INFERENCE
+static void SD_CardLogging_AI_inference(char* NN_input, uint32_t NN_input_size, Gesture_output_t Y_log)
+{
+
+
+  char myBuffer[256]="";
+  uint32_t CharPos=0;
+  //static char AI_file_name[64];
+  //char Log[2];
+  uint32_t byteswritten;
+  //static char *MonthName[]={"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
+//  FIL MyFileAI;
+//  FATFS myFATAFS;
+//  char mySDPath[4];
+  
+  
+  
+//  sprintf(AI_file_name, "AI_inference_test");
+  RTC_GetCurrentDateTime();
+//  sprintf(AI_file_name, "%s-Ann_%02d_%s_%02d_%02dh_%02dm_%02ds.csv",
+//                       AI_file_name,
+//                       CurrentDate.Date,
+//                       MonthName[CurrentDate.Month-1],
+//                       CurrentDate.Year,
+//                       CurrentTime.Hours,
+//                       CurrentTime.Minutes,
+//                       CurrentTime.Seconds);
+  //CharPos = sprintf(myBuffer,"%c",'\n');
+  CharPos = sprintf(myBuffer, "%02d:%02d:%02d.%03ld,",
+                         CurrentTime.Hours,
+                         CurrentTime.Minutes,
+                         CurrentTime.Seconds,
+                         999- (CurrentTime.SubSeconds*1000)/(CurrentTime.SecondFraction));
+  CharPos += sprintf(myBuffer+CharPos,"Output,");
+  CharPos += sprintf(myBuffer+CharPos,"%02d",
+                         Y_log);
+  CharPos += sprintf(myBuffer+CharPos,"%c",'\n');
+  //CharPos += sprintf(myBuffer+CharPos,"NN input buffer,");
+  //CharPos += sprintf(myBuffer+CharPos,"%c",'\n');
+  //if (f_mount(&myFATAFS,mySDPath,1)==FR_OK){
+  //char myPath[] = "Test_AI_log.csv\0";
+  //f_open(&MyFileAI, AI_file_name, FA_CREATE_ALWAYS | FA_WRITE);
+  //f_open(&MyFileAI, myPath, FA_OPEN_APPEND);
+  //char myDataTest[] = "Hello World!\0";
+  //f_write(&MyFileAI, myBuffer, sizeof(myBuffer), &byteswritten);
+  //sprintf(Log, "%02d", Y_log);
+  f_write(&MyFileAI, myBuffer, CharPos, &byteswritten);  
+  f_write(&MyFileAI, NN_input, NN_input_size, &byteswritten);
+  
+  CharPos = sprintf(myBuffer,"%c",'\n');
+  f_write(&MyFileAI, myBuffer, CharPos, &byteswritten); 
+  
+  f_sync(&MyFileAI);
+  HAL_Delay(1000);
+  
+}
+#endif
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
