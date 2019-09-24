@@ -1,5 +1,5 @@
-#import numpy as np
-#np.random.seed(10)
+import numpy as np
+np.random.seed(10)
 #tf.set_random_seed(10)
 
 from keras.models import Sequential
@@ -32,12 +32,10 @@ parser.add_argument('--data_proc', default = "Processed/ODR 52Hz", type= str,
                     help='path to processed dataset')
 parser.add_argument('--log_path', default = "Train log", type= str,
                     help='path to processed dataset')
-parser.add_argument('--epochs', default=30, type=int, metavar='N',
-                    help='number of total epochs to run (default: 30)')
-#parser.add_argument('--lr', default=0.00001, type=float,
-#                    help='initial learning rate')
-parser.add_argument('--batch_size', default=50, type=int,
-                    metavar='N', help='mini-batch size (default: 50)')
+parser.add_argument('--epochs', default=150, type=int, metavar='N',
+                    help='number of total epochs to run (default: 150)')
+parser.add_argument('--batch_size', default=30, type=int,
+                    metavar='N', help='mini-batch size (default: 30)')
 parser.add_argument('--n_axis', default=6, type=int,
                    help='number of axis input (default: 6)')
 parser.add_argument('--n_cells', default=64, type=int,
@@ -45,73 +43,14 @@ parser.add_argument('--n_cells', default=64, type=int,
 parser.add_argument('--n_layers', default=2, type=int,
                     help='number of GRU layers (default: 2)')
 parser.add_argument('--seq_length', type=int, default=128, help='input sequence lenght (default:128)')
-parser.add_argument('-n', '--n_classes', default=10, type=int,      # To fix later 9 classes instead of 10 (class=0 not used)
+parser.add_argument('-n', '--n_classes', default=10, type=int,      # One dummy class=0 for not valid gestures
                     help='number of classes (default: 9)')
-#parser.add_argument('--mode', default='train')
-#parser.add_argument('--pretrained', default = "", type= str,
-#                    help='path to pre-trained model')
-#parser.add_argument('--input_type', default = "raw", type= str,
-#                    help='select input type')
-#parser.add_argument('--m', default='ox' ,type = str,help='model')
 parser.add_argument('--retrain', default=False, help='retrain the NN or load saved parameters (default : False)')
 parser.add_argument('--create', default=False, help='create the dataset from log files (default : False)')
 parser.add_argument('--shuffle_dataset', default=False, help='reshuffle dataset for train and test sets (default : False)')
 args = parser.parse_args()
 
-# Plot a graph with the rsult of Loss and Accuracy after the training
-def plot_loss_acc(file_path):
-    epoch = []
-    loss = []
-    acc = []
-    val_loss = []
-    val_acc = []
-    test_loss = []
-    test_acc = []
-    i=0
 
-    if sys.version_info[0] < 3:
-        in_file = open (file_path, 'rb')
-    else:
-        in_file = open (file_path, 'r', newline='', encoding='utf8')
-        
-    with in_file as f:
-        for row in f:
-            seq=row
-            if i>0:
-                if 2 < i < args.epochs:
-                    epoch.append(np.array(row.strip().split(","))[0].astype(float))
-                    loss.append(np.array(row.strip().split(","))[1].astype(float))
-                    acc.append(np.array(row.strip().split(","))[2].astype(float))
-                    val_loss.append(np.array(row.strip().split(","))[3].astype(float))
-                    val_acc.append(np.array(row.strip().split(","))[4].astype(float))
-                    test_loss.append(np.array(row.strip().split(","))[5].astype(float))
-                    test_acc.append(np.array(row.strip().split(","))[6].astype(float))
-            i = i+1
-
-    #loss = np.array(loss)
-    #print(loss)
-    x_axis = epoch
-    fig = plt.figure()
-    plt.subplot(211)
-    plt.title('Training results')
-    plt.ylabel('Loss')
-    plt.grid(True)
-    plt.plot(x_axis,loss,'b', label='Loss')
-    plt.plot(x_axis,val_loss,'r', label='Validation Loss')
-    plt.plot(x_axis,test_loss,'g', label='Test Loss')
-    plt.legend(prop={'size': 8})
-
-    plt.subplot(212)
-    plt.ylabel('Accuracy')
-    plt.xlabel('Epochs')
-    plt.grid(True)
-    plt.plot(x_axis,acc,'b', label='Accuracy')
-    plt.plot(x_axis,val_acc,'r', label='Validation Accuracy')
-    plt.plot(x_axis,test_acc,'g', label='Test Accuracy')
-    plt.legend(prop={'size': 8})
-    
-    fig.savefig(str(args.log_path)+"\\"+"train_results.png")
-    return fig
 
 def calculate_error (conf_matrix):
     err = 0
@@ -169,24 +108,12 @@ if args.retrain:
     train_log_time = datetime.datetime.fromtimestamp(ts).strftime('%Y-%m-%d %H:%M:%S')
     print (train_log_time)
     save_path = "./Train log/"
-
-    with open(os.path.join(save_path,"log.csv"),'w', newline='', encoding='utf8') as save_log_file:
-        csvwiter = csv.writer(save_log_file)
-        csvwiter.writerow(['epoch','loss','acc','val_loss','val_acc' ,'test_loss', 'test_acc'])    
-
-    for i in range(args.epochs):
-        hist = model.fit(x_train, y_train, batch_size=args.batch_size, verbose=1, epochs=1, validation_split=0.2, shuffle=False)
-        score = model.evaluate(x_test,y_test,batch_size=args.batch_size,verbose=1)
-        print('[{}]Test loss :{} Test acc :{}'.format(i,score[0],score[1]))
-    
-        with open(os.path.join(save_path, "log.csv"), 'a', newline='', encoding='utf8') as save_log_file:
-            csvwiter = csv.writer(save_log_file)
-            csvwiter.writerow([i, hist.history['loss'][0], hist.history['acc'][0], hist.history['val_loss'][0],
-                      hist.history['val_acc'][0],score[0],score[1]])
+        
+    history = model.fit(x_train, y_train, batch_size=args.batch_size, verbose=2, epochs=args.epochs, validation_split=0.2, shuffle=False, validation_data=(x_test, y_test))
         
     #Save the model in .h5 file
     model.save('NN_gesture.h5')
-
+    
     # Save the model and weights in separated files
     # save model as JSON
     json_string = model.to_json()
@@ -194,12 +121,26 @@ if args.retrain:
         json_file.write(json_string)
     model.save_weights('NN_gesture_weights.h5')
 
-    # Plot the model
-    #plot_model(model, to_file=os.path.join(save_path,'CNN_model.png'))
+    # Plot the metrics after training
+    fig = plt.figure()
+    plt.subplot(2,1,1)
+    plt.plot(history.history['acc'])
+    plt.plot(history.history['val_acc'])
+    plt.title('Model accuracy')
+    plt.ylabel('accuracy')
+    plt.xlabel('epochs')
+    plt.legend(['train','test'],loc='lower right')
 
-    # Plot Loss and Accuracy results after training
-    img = plot_loss_acc(os.path.join(save_path, "log.csv"))
-    #plt.show()
+    plt.subplot(2,1,2)
+    plt.plot(history.history['loss'])
+    plt.plot(history.history['val_loss'])
+    plt.title('Model loss')
+    plt.ylabel('loss')
+    plt.xlabel('epochs')
+    plt.legend(['train','test'],loc='upper right')
+    
+    plt.tight_layout()
+    fig.savefig(str(args.log_path)+"/"+"train_results.png")
 
 else:
     #Read json and create model with saved parameters
@@ -208,28 +149,18 @@ else:
     json_file.close()
     model = model_from_json(loaded_model_json)
     model.load_weights('NN_gesture_weights.h5')
-    
 
-# Make prediction for training set
-y_pred = model.predict(x_train, batch_size=args.batch_size, verbose=1)
-print("Confusion matrix for training dataset")
-conf_matrix = confusion_matrix(y_train.argmax(axis=1), y_pred.argmax(axis=1), labels=[1,2,3,4,5,6,7,8,9])
-print(conf_matrix)
-print("Y_train shape")
-print(y_train.shape)
-print("Y_pred shape")
-print(y_pred.shape)
-error=calculate_error(conf_matrix)
-print("Errors in the training dataset")
-print(error)
-print("Accuracy for training dataset")
-accuracy = 1 - (error / y_train.shape[0])
-print(accuracy)
+# Evaluate model perfomance 
+scores = model.evaluate(x_test,y_test,verbose=2)
+print("%s: %.2f%%" % (model.metrics_names[0], scores[0]*100))
+print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
+
     
 # Make prediction for given input to generate Confusion matrix
-y_pred = model.predict(x_test, batch_size=args.batch_size, verbose=1)
+y_pred = model.predict(x_test, verbose=1)
 
 # Print the confusion matrix for test dataset
+print()
 print("Confusion matrix for test dataset")
 conf_matrix = confusion_matrix(y_test.argmax(axis=1), y_pred.argmax(axis=1), labels=[1,2,3,4,5,6,7,8,9])
 print(conf_matrix)
@@ -242,6 +173,7 @@ print(accuracy)
 
 #print(classification_report(y_test.argmax(axis=1),y_pred.argmax(axis=1)))
 
+print()
 train_labels=np.zeros(y_train.shape[0])
 for test_item in y_train:
     for j in range(10):
@@ -260,5 +192,4 @@ for test_item in y_test:
 
 for i in range(10):
     print("Number of logs for test dataset:"+"Label_"+str(i)+" >> "+str(test_labels[i]))
-			
 
