@@ -265,7 +265,7 @@ Gesture_output_t Gesture_run(SensorAxes_t ACC_Value, SensorAxes_t GYR_Value)
       ai_input[0].data  = AI_HANDLE_PTR(&window_buffer[win_offset]);
       ai_output[0].data = AI_HANDLE_PTR(out);
       /* Matteo */
-      //LedToggleTargetPlatform();
+      LedToggleTargetPlatform();
       batch = ai_network_run(network, &ai_input[0], &ai_output[0]);
       if (batch != 1) {
         aiLogErr(ai_network_get_error(network),"ai_network_run");
@@ -273,7 +273,7 @@ Gesture_output_t Gesture_run(SensorAxes_t ACC_Value, SensorAxes_t GYR_Value)
       last_prediction = gesture_postProc(out);
       debug_check++; 
       /* Matteo */
-      //LedToggleTargetPlatform();
+      LedToggleTargetPlatform();
       ActivityCode = map2GestureClasses(last_prediction);
       #ifdef AI_LOG_INFERENCE
       /* Matteo */

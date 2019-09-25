@@ -20,7 +20,7 @@
         <LeaveTargetRunning>_ 0</LeaveTargetRunning>
     </StLinkDriver>
     <DebugChecksum>
-        <Checksum>3844031027</Checksum>
+        <Checksum>2745960236</Checksum>
     </DebugChecksum>
     <Exceptions>
         <StopOnUncaught>_ 0</StopOnUncaught>
@@ -33,8 +33,8 @@
         <ShowArgs>0</ShowArgs>
     </CallStack>
     <Disassembly>
-        <MixedMode>1</MixedMode>
         <InstrCount>0</InstrCount>
+        <MixedMode>1</MixedMode>
     </Disassembly>
     <SWOTraceHWSettings>
         <OverrideDefaultClocks>0</OverrideDefaultClocks>
@@ -130,7 +130,9 @@
         <Count>2</Count>
     </Breakpoints2>
     <Aliases>
-        <Count>0</Count>
+        <A0>_ "C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c" "C:\Matteo\Gesture demo\STM32 Sensortile FW project\Middlewares\Third_Party\FreeRTOS\Source\CMSIS_RTOS\cmsis_os.c"</A0>
+        <A1>_ "C:\Matteo\STM32 Sensortile FW project - STM32CubeIDE\Projects\Multi\Applications\SENSING1\Src\main.c" ""</A1>
+        <Count>2</Count>
         <SuppressDialog>0</SuppressDialog>
     </Aliases>
 </settings>
