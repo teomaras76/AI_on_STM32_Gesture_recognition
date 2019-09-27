@@ -142,6 +142,11 @@ if args.retrain:
     plt.tight_layout()
     fig.savefig(str(args.log_path)+"/"+"train_results.png")
 
+    # Evaluate model perfomance 
+    scores = model.evaluate(x_test,y_test,verbose=2)
+    print("%s: %.2f%%" % (model.metrics_names[0], scores[0]*100))
+    print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
+
 else:
     #Read json and create model with saved parameters
     json_file = open('NN_gesture.json', 'r')
@@ -150,10 +155,7 @@ else:
     model = model_from_json(loaded_model_json)
     model.load_weights('NN_gesture_weights.h5')
 
-# Evaluate model perfomance 
-scores = model.evaluate(x_test,y_test,verbose=2)
-print("%s: %.2f%%" % (model.metrics_names[0], scores[0]*100))
-print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
+
 
     
 # Make prediction for given input to generate Confusion matrix
